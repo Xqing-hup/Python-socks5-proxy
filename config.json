@@ -1,7 +1,7 @@
 {
   "Server IP": "127.0.0.1",
-  "Server Port": 10808,
+  "Server Port": 1080,
   "Verify": true,
-  "User": "root",
-  "Passwd": "hackereonhdb666"
+  "User": "admin",
+  "Passwd": "123456"
 }
