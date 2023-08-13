@@ -59,7 +59,6 @@ def processing_data(server_new, server_addr):
                 print(f'[{timelog()}] Response: {domain}:{port} -> {server_addr[0]}:{server_addr[1]} Mode: Domain')
         elif recvdata[3] == 1:  # IP模式
             ip = inet_ntoa(recvdata[4:8])
-            print("IP 模式")
             remote_socket = socket(AF_INET, SOCK_STREAM)
             remote_socket.connect((ip, port))
             bind_address = remote_socket.getsockname()
@@ -125,7 +124,6 @@ def verify(server_new, server_addr):
             server_new.send(b"\x05\x00")
             processing_data(server_new, server_addr)
     except TimeoutError:
-        print("超时")
         server_new.close()
     except ConnectionAbortedError:
         server_new.close()
