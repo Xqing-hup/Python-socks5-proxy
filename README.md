@@ -1,0 +1,1 @@
+You need to convert the thread to a coroutine and encrypt it at the transport layer so that your server is not blocked and can operate for a long time (don't forget to change the IP address and port).
